@@ -4,11 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>N. Sita properties Solution - Premium Construction Company in Pokhara</title>
-    <link rel="icon" href="https://media-hosting.imagekit.io/d6cdfe076f0a4de9/favicon.ico?Expires=1839342735&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=qikqGNJGlgOlcp5kSYmKnpohzxAaxrF7G5bXFumHDTy89K3fJPIVIF1aYG-Ko1repcnQl66EQzPE3GjYR3pNANiyNuDXedLGeLwYvBO11kG2Dda-nvjgbtBh2Qzys37BVlVXvpbBaDyATlWVWiwuAKvYm9VjSlKG6MQf0IlLfAGiWkC~un2UDpDhPe9VqPOXVqDlb9Fpc6J9gWiAhdpcJNgTKnVwJ5L~JrlH6Id~cK98TcOVlGngfNMOpsBz-DMp76hcKJ7jQZvxXzjuDWA16PJrqsMDtei82nQL8QEvNf9mfd0KyN7OsjHUUi7AE4r5jLUbY5c2DDYIo-8jabxH3w__" type="image/x-icon">
-    <meta name="description" content="Trusted web development services in Pokhara offering  website and mobile app development services. Call us anytime!">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-
+<link rel="icon" href="https://media-hosting.imagekit.io/d6cdfe076f0a4de9/favicon.ico?Expires=1839342735&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=qikqGNJGlgOlcp5kSYmKnpohzxAaxrF7G5bXFumHDTy89K3fJPIVIF1aYG-Ko1repcnQl66EQzPE3GjYR3pNANiyNuDXedLGeLwYvBO11kG2Dda-nvjgbtBh2Qzys37BVlVXvpbBaDyATlWVWiwuAKvYm9VjSlKG6MQf0IlLfAGiWkC~un2UDpDhPe9VqPOXVqDlb9Fpc6J9gWiAhdpcJNgTKnVwJ5L~JrlH6Id~cK98TcOVlGngfNMOpsBz-DMp76hcKJ7jQZvxXzjuDWA16PJrqsMDtei82nQL8QEvNf9mfd0KyN7OsjHUUi7AE4r5jLUbY5c2DDYIo-8jabxH3w__" type="image/x-icon">
+<meta name="description" content="Trusted web development services in Pokhara offering  website and mobile app development services. Call us anytime!">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
 
 <script>
 tailwind.config={theme:{extend:{colors:{primary:'#180CF6',secondary:'#0F0A3C'},borderRadius:{'none':'0px','sm':'2px',DEFAULT:'4px','md':'8px','lg':'12px','xl':'16px','2xl':'20px','3xl':'24px','full':'9999px','button':'4px'}}}}</script>
@@ -115,6 +114,70 @@ border: solid white;
 border-width: 0 2px 2px 0;
 transform: rotate(45deg);
 }
+
+/* Mobile menu styles */
+.mobile-menu {
+position: fixed;
+top: 0;
+right: 0;
+width: 280px;
+height: 100%;
+background-color: white;
+box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+transform: translateX(100%);
+transition: transform 0.3s ease-in-out;
+z-index: 1000;
+overflow-y: auto;
+}
+.mobile-menu.active {
+transform: translateX(0);
+}
+.mobile-menu-content {
+padding: 80px 20px 20px;
+}
+.mobile-menu-link {
+display: block;
+padding: 12px 0;
+color: #333;
+font-weight: 500;
+border-bottom: 1px solid #eee;
+}
+.mobile-menu-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0,0,0,0.5);
+z-index: 999;
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.mobile-menu-overlay.active {
+opacity: 1;
+visibility: visible;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+.hero-section {
+background-position: 70% center;
+}
+.hero-section .container {
+padding-top: 100px;
+}
+.hero-section h1 {
+font-size: 2.5rem;
+line-height: 1.2;
+}
+.project-filter-buttons {
+flex-wrap: wrap;
+}
+.project-filter-buttons button {
+margin-bottom: 8px;
+}
+}
 </style>
 </head>
 <body class="bg-white">
@@ -123,7 +186,7 @@ transform: rotate(45deg);
 <div class="container mx-auto px-4 py-3">
 <div class="flex justify-between items-center">
 <div class="flex items-center">
-<a href="#" class="text-3xl font-['arial'] text-primary">  Purna Nirma Sewa</a>
+<a href="#" class="text-3xl font-['arial'] text-primary">Purna Nirma Sewa</a>
 </div>
 <nav class="hidden md:flex space-x-8 items-center">
 <a href="#home" class="nav-link active-nav font-medium text-gray-800 hover:text-primary transition">Home</a>
@@ -131,15 +194,26 @@ transform: rotate(45deg);
 <a href="#projects" class="nav-link font-medium text-gray-800 hover:text-primary transition">Projects</a>
 <a href="#services" class="nav-link font-medium text-gray-800 hover:text-primary transition">Services</a>
 <a href="#contact" class="nav-link font-medium text-gray-800 hover:text-primary transition">Contact</a>
-<div class="flex items-center space-x-2 ml-4">
-</div>
-</div>
-<div class="md:hidden w-10 h-10 flex items-center justify-center">
-<i class="ri-menu-line ri-lg text-gray-800"></i>
-</div>
+</nav>
+<button id="mobile-menu-button" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-800 focus:outline-none">
+<i class="ri-menu-line ri-2x"></i>
+</button>
 </div>
 </div>
 </header>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="mobile-menu">
+<div class="mobile-menu-content">
+<a href="#home" class="mobile-menu-link">Home</a>
+<a href="#about" class="mobile-menu-link">About</a>
+<a href="#projects" class="mobile-menu-link">Projects</a>
+<a href="#services" class="mobile-menu-link">Services</a>
+<a href="#contact" class="mobile-menu-link">Contact</a>
+</div>
+</div>
+<div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+
 <!-- Hero Section -->
 <section id="home" class="hero-section pt-24 min-h-screen flex items-center relative overflow-hidden">
 <div class="absolute inset-0 w-full h-full">
